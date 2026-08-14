@@ -8,3 +8,12 @@ def add_student(user_name, user_group, user_grade):
 user_name = input("Enter student name: ")
 user_group = input("Enter student group: ")
 user_grade = input("Enter student grade: ")
+
+def search_student(user_search_name):
+    for student, info in students_list.items():
+        if user_search_name == student:
+            for key, value in info.items():
+                print(f"{key}: {value}")
+        else:
+            print(f"{student} is not in the list")
+user_search_name = input("Enter student name: ")
